@@ -6,20 +6,6 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsRegressor
 from sklearn.preprocessing import StandardScaler
 
-st.title("Página Principal")
-st.write("Bem-vindo à página principal. Use a barra lateral para navegar.")
-# Função para carregar os dados com cache
-
-# Menu de navegação
-page = st.selectbox("Escolha a página", ["Página Principal", "Página 1"])
-
-if page == "Página Principal":
-    st.title("Página Principal")
-    st.write("Bem-vindo à página principal!")
-elif page == "Página 1":
-    st.title("Página 1")
-    st.write("Esta é a Página 1.")
-
 @st.cache_data
 def carregar_dados(caminho_csv, caminho_estacoes):
     try:
